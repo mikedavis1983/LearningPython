@@ -1,0 +1,29 @@
+1) To see your local changes
+----------------------------
+
+git diff
+
+2) To fetch and merge in any changes that anyone else made to the github repo
+-----------------------------------------------------------------------------
+
+git fetch
+git merge origin/master
+
+
+3) To add your local changes and commit them
+--------------------------------------------
+
+(Find files that are already in git and have changed): git add -u .
+(Add a new file that you've just made into git): git add <name of file>
+
+Then:
+
+git commit -m"My commit message"
+
+4) To push your committed changes up to github
+----------------------------------------------
+
+git push origin master
+
+(Note, if someone else has changed the repo remotely then this will complain and fail.
+ Under these circumstances do a fetch and a merge first - see 2 - then push again)
