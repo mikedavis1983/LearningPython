@@ -13,7 +13,7 @@ print "Naive split", naiveSplit
 
 # The string with unhelpful chars removed
 def isNotPunctuation(c):
-    return c not in "$()'"
+    return c not in "$()',"
     
 filteredString = filter( isNotPunctuation, exampleString )
 print "Filtered string", filteredString
@@ -31,5 +31,7 @@ for word in betterSplit:
     oldCount = wordCount[word]
     wordCount[word] = oldCount + 1
     
-print wordCount
+print "Nicely formatted words:"
+for (word, count) in wordCount.items():
+	print "  ", word, count
     
