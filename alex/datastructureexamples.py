@@ -4,6 +4,10 @@
 a = [4,5,1,2,8,6,3,6,7]
 print "A list of integers:", a
 
+accumulator = 0
+for n in a:
+	accumulator = accumulator + n 
+
 print "Number of elements in the list:", len(a)
 
 # The sorted list
