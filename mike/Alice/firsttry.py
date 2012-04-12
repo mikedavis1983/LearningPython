@@ -19,18 +19,19 @@ for word in naiveSplit:
 
 wordcountlist = wordcount.items()
 wordcountlist.sort()
+wordcountlist.reverse()
+
+newwordcountlist = []
+
+for (word, count) in wordcountlist:
+    newwordcountlist.append( (count, word) )
+
+newwordcountlist.sort()
+newwordcountlist.reverse()
+
+print "First 10 words and counts: ", newwordcountlist[0:10]
 
 opf = open(output_file, "w")
-for (word, count) in wordcountlist:
-    opf.write("%s, %d\n" % (word, count))   
-
-
-#    print " ", word, count
-
-#opf = open(output_file, "w")
-#for word in naivesplit():
-#    opf.write(word + "\n")
-
-
-
+for (count, word) in newwordcountlist:
+    opf.write("%d, %s\n" % (count, word))   
 
